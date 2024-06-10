@@ -1,0 +1,46 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+.soundKeyContainer{
+    justify-content: center;
+    display: flex;
+}
+.tools{
+    display: flex;
+    justify-content: space-around;
+}
+.soundKey{
+    font-family: 'system-ui';
+    width: 100px;
+    height: 100px;
+    background-color:bisque;
+    text-justify: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.recordingSection{
+    text-align: center;
+    padding: 10px;;
+}
+
+.tracks
+{
+    display: flex;
+    justify-content: center;
+}
+.tracks div{
+    padding: 10px;
+}
+
+.tracks button
+{
+    margin: 10px;
+}
+
+.playSection{
+    text-align: center;
+    justify-content: center;
+    padding:10px;
+}

@@ -4,83 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drumkit</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<style>
-
-    .soundKeyContainer{
-        display: flex;
-    }
-
-    .soundKey{
-        font-family: 'system-ui';
-        width: 100px;
-        height: 100px;
-        background-color:bisque;
-        text-justify: center;
-        text-align: center;
-        margin: 10px;
-    }
-
-    .recordingSection{
-        text-align: center;
-        padding: 10px;;
-    }
-    
-    .tracks
-    {
-        display: flex;
-        justify-content: center;
-    }
-
-    .tracks button
-    {
-        margin: 10px;
-    }
-
-    .playSection{
-        text-align: center;
-        justify-content: center;
-        padding:10px;
-    }
-    
-</style>
 <body>
-    <audio controls style="display:none" src="./sounds/boom.wav" controls data-key="q"  id="s1"></audio>
-    <audio controls style="display:none" src="./sounds/clap.wav" controls data-key="w" id="s2"></audio>
-    <audio controls style="display:none" src="./sounds/hihat.wav" controls data-key="e" id="s3"></audio>
-    <audio controls style="display:none" src="./sounds/kick.wav" controls data-key="r" id="s4"></audio>
+    <audio controls style="display:none" src="./sounds/boom.wav" id="s1"></audio>
+    <audio controls style="display:none" src="./sounds/clap.wav" id="s2"></audio>
+    <audio controls style="display:none" src="./sounds/hihat.wav" id="s3"></audio>
+    <audio controls style="display:none" src="./sounds/kick.wav" id="s4"></audio>
+    <h1>Sounds</h1>
     <div class="soundKeyContainer">
         <div class="soundKey" id="s1">Q - Boom</div>
         <div class="soundKey" id="s2">W - Clap</div>
         <div class="soundKey" id="s3">E - Hihat</div>
         <div class="soundKey" id="s4">R - Kick</div>
     </div>
-    <div>
+
+    <div class="tools">
         <div class="recordingSection">
             <h1>Recording Section</h1>
+            <label>Do you want override track?</label>
+            <input id="overrideCheckboxId" type="checkbox">
+            <br>
+            <br>
             <button onclick="startRecording()">Start Recording</button>
             <button onclick="stopRecording()">Stop Recording</button>
-            <br>
-            <br>
-            <select id="tracksRecordingOptions">
+            <br><br>
+            <select id="tracksRecordingOptions" onchange="getSelectedValue()">
                 <option value="track1">Track 1</option>
-                <option value="track2">Track 2</option>
-                <option value="track3">Track 3</option>
-                <option value="track4">Track 4</option>
             </select>
+            <br><br>
+            <label for="bpmInput">Set BPM for specific track:</label>
+            <input type="number" id="bpmInput" placeholder="BPM">
+            <button onclick="setBPM()">Set BPM</button>
         </div>
+
         <div class="playSection">
             <h1>Play Section</h1>
+         
             <section class="tracks">
-                <button onclick="playTrack('track1')">Play Track 1</button>
-                <button onclick="playTrack('track2')">Play Track 2</button>
-                <button onclick="playTrack('track3')">Play Track 3</button>
-                <button onclick="playTrack('track4')">Play Track 4</button>
-                <button onclick="playAllTracks()">Play All</button>
-            </section>
-        </div>
-    </div>
+                <div>
+                    <label for="track1">Track 1</label>
+                    <input id="track1" class="selectToPlay" type="checkbox">
+                    <br>
+                    <button>Delete Track</button>
+                </div>
 
-    <script src="main.js"></script>
+            </section>
+            <section class="tracks">
+                <button onclick="playTracks()">Play Selected tracks</button>
+                <button onclick="createTrack()">Add Track</button>
+            </section>
+        </div>  
+    </div>
+    <script src="lab3.js"></script>
 </body>
 </html>
