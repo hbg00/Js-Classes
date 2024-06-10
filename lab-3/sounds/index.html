@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drumkit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio controls style="display:none" src="./sounds/boom.wav" controls data-key="q"  id="s1"></audio>
+    <audio controls style="display:none" src="./sounds/clap.wav" controls data-key="w" id="s2"></audio>
+    <audio controls style="display:none" src="./sounds/hihat.wav" controls data-key="e" id="s3"></audio>
+    <audio controls style="display:none" src="./sounds/kick.wav" controls data-key="r" id="s4"></audio>
+    <div class="soundKeyContainer">
+        <div class="soundKey" id="s1">Q - Boom</div>
+        <div class="soundKey" id="s2">W - Clap</div>
+        <div class="soundKey" id="s3">E - Hihat</div>
+        <div class="soundKey" id="s4">R - Kick</div>
+    </div>
+    <div>
+        <div class="recordingSection">
+            <h1>Recording Section</h1>
+            <button onclick="startRecording()">Start Recording</button>
+            <button onclick="stopRecording()">Stop Recording</button>
+            <br>
+            <br>
+            <select id="tracksRecordingOptions">
+                <option value="track1">Track 1</option>
+                <option value="track2">Track 2</option>
+                <option value="track3">Track 3</option>
+                <option value="track4">Track 4</option>
+            </select>
+        </div>
+        <div class="playSection">
+            <h1>Play Section</h1>
+            <section class="tracks">
+                <button onclick="playTrack('track1')">Play Track 1</button>
+                <button onclick="playTrack('track2')">Play Track 2</button>
+                <button onclick="playTrack('track3')">Play Track 3</button>
+                <button onclick="playTrack('track4')">Play Track 4</button>
+                <button onclick="playAllTracks()">Play All</button>
+            </section>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
