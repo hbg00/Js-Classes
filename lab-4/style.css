@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin-right: 20px;
+}
+
+.search-input {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.openCreateWindow {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.openCreateWindow:hover {
+    background-color: #0056b3;
+}
+
+.notesSection {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; 
+}
+
+.notesSection h3 {
+    text-align: center;
+}
+
+.baseSection,
+.doneSection {
+    width: 45%;
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
+.doneSection {
+    margin-left: 20px;
+}
+
+.createNote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.createNoteContainer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.createNoteHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.createNoteHeader h3 {
+    margin: 0;
+}
+
+.closeCreateWindow {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.closeCreateWindow:hover {
+    background-color: #c82333;
+}
+
+.noteForm label {
+    display: block; 
+    margin-bottom: 5px; 
+}
+.noteForm textarea{
+    max-width: 400px;
+    min-width: 300px;
+    min-height: 50px;
+    max-height: 200px;
+   
+}
+.noteForm input[type="text"],
+.noteForm input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.noteForm input[type="color"],
+.noteForm input[type="submit"],
+.noteForm input[type="reset"] {
+    padding: 8px 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkboxesContainer {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.checkboxesContainer label {
+    margin-right: 10px; 
+}
+
+.note {
+    background-color: #f8f9fa; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.noteHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.archiveButton{
+    background-color:#007bff;
+}
+
+.archiveButton:hover{
+    background-color: #0056b3;
+}
+
+.updateButton{
+    background-color: #28a745;
+}
+
+.updateButton:hover{
+    background-color: #218838
+}
+
+.deleteButton{
+    background-color: #dc3545;
+}
+
+.deleteButton:hover{
+    background-color: #c82333;
+}
+
+.note h4 {
+    margin-bottom: 10px; 
+}
+
+.note p {
+    margin-bottom: 5px; 
+}
+
+.note button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+#search {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+label,
+#search {
+    margin-right: 16px;
+}
