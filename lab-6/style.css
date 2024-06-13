@@ -1,0 +1,46 @@
+
+canvas {
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+
+.controllers {
+    width: 170px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.controller {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 5px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.controller:hover {
+    background-color: #e0e0e0;
+}
+
+.controller:active {
+    transform: scale(0.95);
+}
+
+.bottom-controllers {
+    margin-top: 10px;
+}
+
+.leaderboard {
+    margin-top: 20px;
+}
+.leaderboard p {
+    margin: 0;
+}
