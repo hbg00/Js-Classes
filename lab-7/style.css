@@ -1,0 +1,15 @@
+canvas {
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+.section{
+    padding-left: 50px;
+}
+.contolers{
+    display: flex;
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+label{
+    padding: 20px;
+}
